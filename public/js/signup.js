@@ -51,7 +51,8 @@ function validarFormulario(e) {
                 inputUsuario.value = "";
                 inputPassword.value = "";
                 inputEmail.value = "";
-                mostrarusuarios();
+                // mostrarusuarios();
+                saveUser();
                 loadingActive.style.display = "flex";
                 setTimeout(function () {
                     window.location.href = "login.html";
@@ -59,6 +60,17 @@ function validarFormulario(e) {
             }
         }
 
+    }
+}
+
+function saveUser() {
+
+    const guardarLocal = (clave, valor) => {
+        localStorage.setItem(clave, valor)
+    };
+
+    for (const usuario of usuarios) {
+        guardarLocal(usuario.username, JSON.stringify(usuario));
     }
 }
 
