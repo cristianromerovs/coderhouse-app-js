@@ -98,6 +98,14 @@ body {
     margin-top: 20px;
 }
 
+.contenedor-formulario .component-signup .formulario-registro input[type=submit]:hover {
+    background-color: #fff;
+    color: rgb(27, 157, 65);
+    cursor: pointer;
+    border: 1px solid #13aa52;
+    transition: 0.7s;
+}
+
 /* LOGIN */
 
 /* USER INTERFACE */

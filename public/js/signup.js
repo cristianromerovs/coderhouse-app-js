@@ -9,18 +9,49 @@ class Usuario {
 const usuarios = [];
 
 let miFormulario = document.getElementById('form-registro');
+let inputUsuario = document.getElementById('input-username');
+let inputPassword = document.getElementById('input-password');
+let inputEmail = document.getElementById('input-email');
+let btnRegistrar = document.getElementById('btn-registrar');
 miFormulario.addEventListener("submit", validarFormulario);
 
+// Keypress para validacion visual inputs
+inputUsuario.addEventListener("keypress", userGreen);
+inputPassword.addEventListener("keypress", passGreen);
+inputEmail.addEventListener("keypress", emailGreen);
 
+function userGreen() {
+    inputUsuario.style.borderColor = "green";
+}
+
+function passGreen() {
+    inputPassword.style.borderColor = "green";
+}
+
+function emailGreen() {
+    inputEmail.style.borderColor = "green";
+}
+
+// Si el input está vacio le cambia el color a red
 function validarFormulario(e) {
     e.preventDefault();
 
-    let inputUsuario = document.getElementById('input-username').value;
-    let inputPassword = document.getElementById('input-password').value;
-    let inputEmail = document.getElementById('input-email').value;
-    usuarios.push(new Usuario(inputUsuario, inputPassword, inputEmail));
-    alert('Usuario agregado con exito');
-    mostrarusuarios();
+    if (inputUsuario.value === "") {
+        inputUsuario.style.borderColor = "red";
+    } else {
+        if (inputPassword.value === "") {
+            inputPassword.style.borderColor = "red";
+        } else {
+            if (inputEmail.value === "") {
+                inputEmail.style.borderColor = "red";
+            } else {
+                usuarios.push(new Usuario(inputUsuario.value, inputPassword.value, inputEmail.value));
+                btnRegistrar.value = "Usuario registrado con exito!";
+                mostrarusuarios();
+            }
+        }
+
+    }
 }
 
 function mostrarusuarios() {
