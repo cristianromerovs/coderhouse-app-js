@@ -9,7 +9,6 @@ class Usuario {
 const usuarios = [];
 
 let miFormulario = document.getElementById('form-registro');
-let seccionMain = document.getElementById('section-main');
 miFormulario.addEventListener("submit", validarFormulario);
 
 
@@ -25,19 +24,20 @@ function validarFormulario(e) {
 }
 
 function mostrarusuarios() {
-    console.log(usuario.username);
-    console.log(usuario.password);
-    console.log(usuario.email);
     // seccionMain.innerHTML = '';
-    // for (const usuario of usuarios) {
-    //     seccionMain.innerHTML += `
-    //         <div class="col-12 col-md-3 col-lg-3">
-    //             <div class="card card-libros">
-    //                 <p><b>Username:</b>${usuario.username}</p>
-    //                 <p><b>Password:</b>${usuario.password}</p>
-    //                 <p><b>Email:</b>${usuario.email}</p>
-    //             </div>
-    //         </div>
-    //         `;
-    // }
+    for (const usuario of usuarios) {
+        console.log(usuario.username);
+        console.log(usuario.password);
+        console.log(usuario.email);
+        // seccionMain.innerHTML += `
+        //     <div class="col-12 col-md-3 col-lg-3">
+        //         <div class="card card-libros">
+        //             <p><b>Username:</b>${usuario.username}</p>
+        //             <p><b>Password:</b>${usuario.password}</p>
+        //             <p><b>Email:</b>${usuario.email}</p>
+        //         </div>
+        //     </div>
+        //     `;
+    }
+
 }

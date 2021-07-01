@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap');
+h1, h2, h3, h4, h5, h6, p, span { padding: 0px; margin: 0px; }
+
+body {
+    background-color: rgb(25, 37, 46);
+    font-family: 'Noto Sans', sans-serif;
+}
+
+/* SIGNUP */
+
+.side-top-buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+.side-top-buttons .signup-button {
+    width: 150px;
+    height: 40px;
+    color: #fff;
+    font-weight: 400;
+    background-color: #13aa52;
+    border-radius: 20px;
+}
+
+.side-top-buttons .signup-button:hover {
+    transition: 0.7s;
+    color: #13aa52;
+    background-color: #fff;
+}
+
+.side-top-buttons .login-button {
+    width: 150px;
+    height: 40px;
+    color: #fff;
+    font-weight: 400;
+    border-radius: 20px;
+}
+
+.side-top-buttons .login-button:hover {
+    transition: 0.7s;
+    color: #13aa52;
+}
+
+.contenedor-formulario {
+    width: 100vw;
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contenedor-formulario .component-signup {
+    width: 350px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 2px 4px 0 rgb(0 0 0 / 90%);
+}
+
+.contenedor-formulario .component-signup h1 {
+    color: #21313c;
+    font-size: 32px;
+    line-height: 40px;
+    letter-spacing: 0px;
+    font-weight: 700;
+}
+
+.contenedor-formulario .component-signup .formulario-registro {
+    display: flex;
+    flex-direction: column;
+}
+
+.contenedor-formulario .component-signup .formulario-registro input[type=text], .contenedor-formulario .component-signup .formulario-registro input[type=email], 
+.contenedor-formulario .component-signup .formulario-registro input[type=password] {
+    padding: 4px 0px 4px 15px;
+    margin: 2px 0px;
+    border-radius: 20px;
+    font-size: 16px;
+    font-weight: 400;
+    border: 1px solid #b8c4c2;
+    outline: none;
+    color: rgb(25, 37, 46);
+    background-color: #fff;
+}
+
+.contenedor-formulario .component-signup .formulario-registro input[type=submit] {
+    background-color: rgb(27, 157, 65);
+    color: #fff;
+    font-weight: 700;
+    cursor: pointer;
+    border-radius: 20px;
+    border: 1px solid #13aa52;
+    font-size: 16px;
+    padding: 8px 30px;
+    box-shadow: 0 2px 4px 0 rgb(0 0 0 / 30%);
+    margin-top: 20px;
+}
+
+/* LOGIN */
+
+/* USER INTERFACE */
