@@ -12,23 +12,24 @@
 </head>
 
 <body>
-    <div class="container">
-        <div class="side-top-buttons py-2">
-            <button class="btn login-button">Iniciar Sesión</button>
-            <button class="btn signup-button">Registrate</button>
-        </div>
+    <div class="side-top-buttons py-2">
+        <a href="login.html"><button class="btn login-button">Iniciar Sesión</button></a>
+        <a href="signup.html"><button class="btn signup-button">Registrate</button></a>
     </div>
 
-    <div class="container-fluid contenedor-formulario p-4">
-        <div class="row">
-            <div class="col-12">
+    <div class="container signup">
+        <div class="row h-100">
+            <div class="col-12 h-100 d-flex justify-content-center align-items-center">
                 <div class="component-signup">
-                    <h1 class="pb-4">Nuevo usuario</h1>
+                    <h1 class="pb-4">Ingreso usuario</h1>
                     <form action="#" class="formulario-registro" id="form-registro">
                         <input type="text" placeholder="Nombre de usuario:" name="username" id="input-username">
                         <input type="password" name="password" placeholder="Contraseña:" id="input-password">
                         <input type="email" name="email" placeholder="Correo electronico:" id="input-email">
                         <input type="submit" value="Registrar" id="btn-registrar">
+                        <div class="loading" id="loading-active">
+                            <img src="public/img/loading.gif" alt="">
+                        </div>
                     </form>
                 </div>
             </div>

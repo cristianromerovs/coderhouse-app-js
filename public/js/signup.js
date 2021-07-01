@@ -13,6 +13,7 @@ let inputUsuario = document.getElementById('input-username');
 let inputPassword = document.getElementById('input-password');
 let inputEmail = document.getElementById('input-email');
 let btnRegistrar = document.getElementById('btn-registrar');
+let loadingActive = document.getElementById('loading-active');
 miFormulario.addEventListener("submit", validarFormulario);
 
 // Keypress para validacion visual inputs
@@ -47,7 +48,14 @@ function validarFormulario(e) {
             } else {
                 usuarios.push(new Usuario(inputUsuario.value, inputPassword.value, inputEmail.value));
                 btnRegistrar.value = "Usuario registrado con exito!";
+                inputUsuario.value = "";
+                inputPassword.value = "";
+                inputEmail.value = "";
                 mostrarusuarios();
+                loadingActive.style.display = "flex";
+                setTimeout(function () {
+                    window.location.href = "login.html";
+                }, 3000);
             }
         }
 

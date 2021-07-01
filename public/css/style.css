@@ -8,19 +8,38 @@ body {
 
 /* SIGNUP */
 
+.signup, .login {
+    height: 100vh;
+}
+
 .side-top-buttons {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
+    position: absolute;
+    top: 0;
+    right: 10px;
 }
 
 .side-top-buttons .signup-button {
-    width: 150px;
+    width: 120px;
     height: 40px;
     color: #fff;
     font-weight: 400;
     background-color: #13aa52;
     border-radius: 20px;
+    font-size: 13px;
+}
+
+.side-top-buttons .login-button {
+    width: 120px;
+    height: 40px;
+    color: #fff;
+    font-weight: 400;
+    border-radius: 20px;
+    font-size: 13px;
+}
+
+.side-top-buttons .login-button:hover {
+    transition: 0.7s;
+    color: #13aa52;
 }
 
 .side-top-buttons .signup-button:hover {
@@ -29,29 +48,8 @@ body {
     background-color: #fff;
 }
 
-.side-top-buttons .login-button {
-    width: 150px;
-    height: 40px;
-    color: #fff;
-    font-weight: 400;
-    border-radius: 20px;
-}
-
-.side-top-buttons .login-button:hover {
-    transition: 0.7s;
-    color: #13aa52;
-}
-
-.contenedor-formulario {
-    width: 100vw;
-    height: 90vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.contenedor-formulario .component-signup {
-    width: 350px;
+.component-signup {
+    width: 300px;
     padding: 20px;
     background-color: #fff;
     border-radius: 10px;
@@ -59,23 +57,23 @@ body {
     box-shadow: 0 2px 4px 0 rgb(0 0 0 / 90%);
 }
 
-.contenedor-formulario .component-signup h1 {
+.component-signup h1 {
     color: #21313c;
-    font-size: 32px;
+    font-size: 28px;
     line-height: 40px;
     letter-spacing: 0px;
     font-weight: 700;
 }
 
-.contenedor-formulario .component-signup .formulario-registro {
+.component-signup .formulario-registro {
     display: flex;
     flex-direction: column;
 }
 
-.contenedor-formulario .component-signup .formulario-registro input[type=text], .contenedor-formulario .component-signup .formulario-registro input[type=email], 
-.contenedor-formulario .component-signup .formulario-registro input[type=password] {
+.component-signup .formulario-registro input[type=text], .component-signup .formulario-registro input[type=email], 
+.component-signup .formulario-registro input[type=password] {
     padding: 4px 0px 4px 15px;
-    margin: 2px 0px;
+    margin: 3px 0px;
     border-radius: 20px;
     font-size: 16px;
     font-weight: 400;
@@ -85,20 +83,20 @@ body {
     background-color: #fff;
 }
 
-.contenedor-formulario .component-signup .formulario-registro input[type=submit] {
+.component-signup .formulario-registro input[type=submit] {
     background-color: rgb(27, 157, 65);
     color: #fff;
     font-weight: 700;
     cursor: pointer;
     border-radius: 20px;
     border: 1px solid #13aa52;
-    font-size: 16px;
+    font-size: 13px;
     padding: 8px 30px;
     box-shadow: 0 2px 4px 0 rgb(0 0 0 / 30%);
     margin-top: 20px;
 }
 
-.contenedor-formulario .component-signup .formulario-registro input[type=submit]:hover {
+.component-signup .formulario-registro input[type=submit]:hover {
     background-color: #fff;
     color: rgb(27, 157, 65);
     cursor: pointer;
@@ -106,6 +104,59 @@ body {
     transition: 0.7s;
 }
 
+.component-signup .formulario-registro .loading {
+    width: 100%;
+    height: 50px;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+
+.component-signup .formulario-registro .loading img {
+    margin-bottom: -20px;
+    width: 50px;
+    height: 50px;
+}
+
 /* LOGIN */
 
+
 /* USER INTERFACE */
+
+/* Querys */
+@media only screen and (min-width: 800px) {
+}
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  
+}
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1024px) {
+    .component-signup {
+        width: 350px;
+    }
+    .side-top-buttons .signup-button {
+        width: 150px;
+        height: 40px;
+        color: #fff;
+        font-weight: 400;
+        background-color: #13aa52;
+        border-radius: 20px;
+        font-size: 15px;
+    }
+    
+    .side-top-buttons .login-button {
+        width: 150px;
+        height: 40px;
+        color: #fff;
+        font-weight: 400;
+        border-radius: 20px;
+        font-size: 15px;
+    }
+}
+
+@media only screen and (min-width: 1440px) {
+    .component-signup .formulario-registro input[type=submit] {
+        font-size: 15px;
+    }
+}
