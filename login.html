@@ -27,11 +27,18 @@
                         <input type="text" placeholder="Nombre de usuario:" name="username" id="input-username-login">
                         <input type="password" name="password" placeholder="Contraseña:" id="input-password-login">
                         <input type="submit" value="Ingresar" id="btn-ingresar">
+                        <div class="loading" id="loading-active">
+                            <img src="public/img/loading.gif" alt="">
+                        </div>
                     </form>
                 </div>
             </div>
         </div>
     </div>
+
+    <script src="https://www.gstatic.com/firebasejs/8.7.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.7.0/firebase-firestore.js"></script>
+    <script src="public/js/database.js"></script>
     <script src="public/js/login.js"></script>
 </body>
 
